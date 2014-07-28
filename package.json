@@ -1,0 +1,15 @@
+{ 
+  "name": "mongojs-logger",
+  "version": "0.0.1",
+  "description": "Logging all the db operations performed through MongoJs driver",
+  "author": "Jayy Vis <jayyvis@gmail.com>",
+  "dependencies": {
+	  "semver": "*"
+  },  
+  "repository": {
+    "type" : "git",
+    "url" : "http://github.com/jayyvis/mongojs-logger.git"
+  },
+  "license": "MIT"  
+}
+
