@@ -18,11 +18,12 @@ That's it.
 
 
 ###Install
+```
 npm install mongojs-logger
-
+```
 
 ###How it works
-Once you setup the log handler, than any db operation will invoke it with the necessary details to do logging.
+Once you setup the log handler, then any db operation will fire the handler with necessary details to log.
 
 ```
 db.comments.find({postId: 250}, function(err, comments) {
@@ -36,12 +37,12 @@ And you can get a log for this operation (as how your handler prints it)
 ```
 
 ###What's more
-When building multi-tenant web applications in node.js, you may need to write logs with necessary details to isolate the all logs of a user, in a given session or a particular request.
+When building multi-tenant web applications in node.js, you may need to write logs with necessary details to isolate the all logs of a particular user, in a given session or a particular request.
 
-To do this, mongojs-logger supports passing in a context object to your log handler.
+To do this, ```mongojs-logger``` supports passing in a ```context``` object to your log handler.
 
 
-When you pass in a context object as last argument to db operation, it will be passed on to your log handler
+When you pass in a context object as last argument to db operation, it will be passed on to your log handler.
 
 ```
 db.comments.find({postId: 250}, function(err, comments) {
@@ -57,7 +58,8 @@ logger(function(op, context) {
 });
 ```
 
-NOTE: Any object can be passed in as context object. It should just have ```__type``` field set
+###Sample context object
+
 ```
 var context = {
    requestId: r140,
@@ -67,6 +69,6 @@ var context = {
 };
 ```
 
-   
+NOTE: Any object can be passed in as context object. It should just have ```__type``` field set.   
    
 
