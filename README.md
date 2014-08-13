@@ -37,7 +37,7 @@ And you can get a log for this operation (as how your handler prints it)
 ```
 
 ###What's more
-When building multi-tenant web applications in node.js, you may need to write logs with necessary details to isolate the all logs of a particular user, in a given session or a particular request.
+When building multi-tenant web applications in node.js, you may need to write logs with necessary details to isolate all the logs of a particular user, in a given session or a particular request.
 
 To do this, ```mongojs-logger``` supports passing in a ```context``` object to your log handler.
 
