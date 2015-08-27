@@ -1,7 +1,7 @@
 
 var mongojs = require('mongojs');
 var assert = require('assert');
-var EventEmitter = require('events');
+var EventEmitter = require('events').EventEmitter;
 var semver = require('semver');
 
 
